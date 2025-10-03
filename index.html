@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace's Schedule</title>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- feather icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 7%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9999;
+    }
+
+    .navbar .navbar-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar .navbar-logo span {
+      color: #fc57c5;
+    }
+
+    .navbar .navbar-extra a {
+      color: #fff;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* hero section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: #fff;
+
+      background-image: url('https://picsum.photos/1600/900'); /* ganti dengan fotomu */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 60%);
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* section tabel */
+    .tabel {
+      padding: 6rem 10% 4rem;
+      text-align: center;
+    }
+
+    .tabel h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .tabel table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .tabel table th,
+    .tabel table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+    }
+
+    .tabel table th {
+      background: #f74d9f;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .tabel table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #222;
+      color: #fff;
+    }
+
+    footer .socials a {
+      margin: 0 0.5rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    footer .credit {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">grace<span>’s schedule</span>.</a>
+    <div class="navbar-extra">
+    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+    <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <section class="hero">
+    <main class="content">
+      <h1>Welcome to <span>Grace's Schedule</span></h1>
+    </main>
+  </section>
+
+  <!-- jadwalku -->
+  <section class="tabel">
+    <h2>Jadwal Grace</h2>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Mata Kuliah</th>
+        <th>Hari</th>
+        <th>Waktu</th>
+      </tr>
+      <tr>
+        <td rowspan="2">1</td>
+        <td rowspan="2">Basic Listening</td>
+        <td>Senin</td>
+        <td>08:00 - 09:40</td>
+      </tr>
+      <tr>
+        <td colspan="2">Gedung A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Retorika</td>
+        <td>Senin</td>
+        <td>10:30 - 12:10</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Lab. Basis Data</td>
+        <td>Selasa</td>
+        <td>13:00 - 14:00</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Basis Data</td>
+        <td>Rabu</td>
+        <td>10:30 - 13:00</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Wirausaha Digital</td>
+        <td>Rabu</td>
+        <td>13:50 - 15:30</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Struktur Data</td>
+        <td>Kamis</td>
+        <td>08:00 - 10:30</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Pemrograman Web</td>
+        <td>Kamis</td>
+        <td>10:30 - 13:00</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Kecerdasan Buatan</td>
+        <td>Kamis</td>
+        <td>13:00 - 15:30</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Lab. Pemrograman Web</td>
+        <td>Jumat</td>
+        <td>08:00 - 09:40</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Lab. Struktur Data</td>
+        <td>Jumat</td>
+        <td>10:30 - 12:10</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td colspan="2">Volunteer</td>
+        <td>14:30 - selesai</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="socials">
+      <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+    </div>
+    <div class="credit">
+      <p>created by <a href="#">gracesilitonga</a>. | &copy; 2025.</p>
+    </div>
+  </footer>
+
+  <!-- feather icons -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
